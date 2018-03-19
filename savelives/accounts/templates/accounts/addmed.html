@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+body{
+	background-image:url(http://shabier.com/images/wallpaper-light/wallpaper-light-10.jpg);
+	background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
+<div class="container text-center">
+  <br>
+  <p>Add product</p>
+  <hr>
+  <form class="form-control" method="POST" style="border-color:transparent;">
+    {% csrf_token %}
+    {{form1.as_p}}
+    <input type="submit" name="" class="btn" value="Add">
+  </form>
+</div>
+
+{% endblock %}
